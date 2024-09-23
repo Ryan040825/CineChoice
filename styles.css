@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0e0e0e; /* Fundo mais escuro */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #1b1b1b 0%, #0e0e0e 100%);
+}
+h1 {
+    margin-top: 20px;
+    font-size: 3em;
+    text-align: center;
+    color: #f1c40f; /* Cor amarela destacada */
+    text-shadow: 2px 2px 4px #000;
+}
+.catalog-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+.highlighted {
+    width: 420px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Cantos arredondados */
+    overflow: hidden;
+}
+.highlighted:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px rgba(243, 156, 18, 0.8); /* Efeito de brilho amarelo */
+}
+.highlighted img {
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #444;
+    object-fit: cover;
+}
+.highlighted-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    color: #f1c40f;
+    font-weight: bold;
+}
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 420px;
+}
+.movie {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.2);
+}
+.movie img {
+    width: 100%;
+    border-bottom: 3px solid #444;
+    object-fit: cover;
+}
+.movie-title {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.movie-title a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.movie-title a:hover {
+    color: #f39c12;
+}
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
